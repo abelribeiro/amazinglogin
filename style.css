@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100vh;
+  }
+  body{
+    background-color:#1d1d1d;
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .main-header{
+      padding:10px 20px 0;
+  }
+  .main-header h1{
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+  }
+  .main-header p{
+    font-size:1rem;
+    margin-bottom:10px;
+  }
+  main {
+    background-color:#6828CB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top:20px;
+    max-width: 400px;
+    border-radius: 30px;
+  }
+  form {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 30px 25px;
+    border-radius: 30px;
+    width:400px;
+    overflow:hidden;
+  }
+  form .field-blocks{
+      margin-bottom:20px;
+  }
+  form .field-blocks label{
+      font-size:14px;
+      color:#310f63;
+  }
+  form .field-blocks input{
+      padding:15px;
+      color:#7159c1;
+      border:1px solid #f1f1f1;
+      border-radius:5px;
+      display: block;
+      width:100%;
+      font-size:16px;
+  }
+  form .btn-login{
+      display:block;
+      background:#6828CB;
+      color:#fff;
+      text-align: center;
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:25px;
+      font-size: 16px;
+  }
+  form .btn-login:hover{
+    background:#5921ad; 
+  }
+
+  /* Animation */
+
+  @keyframes fade {
+      from{
+        opacity: 0;
+        transform: scale(0.9);
+      } to{
+        opacity: 1;
+        transform: scale(1);
+      }
+  }
+  @keyframes move {
+    from{
+      opacity: 0;
+      transform: translateX(-40%);
+    } to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+  
+
+.form-wrapper{
+    animation-name: fade;
+    animation-duration:500ms
+}
+form .field-blocks:nth-child(1){
+    animation: move;
+    animation-duration:500ms;
+    animation-delay:250ms;
+    animation-fill-mode: backwards;
+}
+form .field-blocks:nth-child(2){
+    animation: move;
+    animation-duration:500ms;
+    animation-delay:350ms;
+    animation-fill-mode: backwards;
+}
+
+
+
